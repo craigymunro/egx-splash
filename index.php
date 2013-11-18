@@ -7,7 +7,7 @@
 	<script type="text/javascript">
 		less = { env: "development" };
 	</script>
-	<script src="less.js" type="text/javascript"></script>
+	<script src="less/less.js" type="text/javascript"></script>
 	<script src="countdown.js" type="text/javascript"></script>	
 	
 	<script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1/prototype.js"></script>
