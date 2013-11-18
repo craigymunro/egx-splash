@@ -1,0 +1,320 @@
+@link: #0069ff;
+@font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@max-width: 1200px;
+
+// Breakpoints
+@landscape: ~" screen and (min-width: 480px)";
+@medium: ~" screen and (min-width: 767px)";
+@large: ~" screen and (min-width: 1025px)";
+@xlarge: ~" screen and (min-width: 1260px)";
+@xxlarge: ~" screen and (min-width: 1281px)";
+@xxxlarge: ~" screen and (min-width: 1601px)";
+
+@tall: ~" screen and (min-height: 769px)";
+
+body
+{
+	font-family: @font;
+	color: #383838;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: @font;
+}
+
+a
+{
+	color: @link;
+	text-decoration: none;
+	border: none;
+}
+
+.event
+{
+	display: block;
+	float: left;
+	width: 100%;
+	background-color: #cdcdcd;
+	background-image: -webkit-radial-gradient(center center, white, #cdcdcd);
+	text-align: center;
+	color: #666666;
+	//overflow-y: scroll;
+
+	@media @landscape
+	{
+		width: 50%;
+		min-height: 100%;
+	}
+	
+	@media @large
+	{
+		height: 50%;
+		width: 100%;
+		min-height: 29em;
+	}
+	
+	@media @large
+	{
+
+	}
+	
+	> section
+	{
+		display: block;
+		max-width: @max-width;
+		margin: 0 auto;
+
+		width: 100%;
+		clear: both;
+		padding: 1em 0;
+		text-align: left;
+		
+		@media @large
+		{
+			padding: 2em 0;
+		}
+		
+		> div
+		{
+			float: left;
+			width: 100%;
+			clear: both;
+			padding: 1.5em;
+			
+			@media @large
+			{
+				padding: 2em 1.5em;
+			}
+						
+			@media @medium
+			{
+				&:nth-of-type(1)
+				{
+					width: 30%;
+					clear: left;
+				}
+
+				&:nth-of-type(2),
+				&:nth-of-type(3)
+				{
+					float: right;
+					width: 70%;
+					clear: right;
+				}
+			}
+
+			@media @xlarge
+			{
+				&:nth-of-type(1),
+				&:nth-of-type(2),
+				&:nth-of-type(3)
+				{
+					float: left;
+					width: 33.333%;
+					clear: none;
+				}
+			}
+			
+			> *
+			{
+				display: block;
+				clear: both;
+				margin: 0;
+				padding: 0;				
+			}
+			
+			img
+			{
+				display: block;
+				max-width: 100%;
+				max-height: 16em;
+				
+				@media @large
+				{
+					max-height: 18em;
+				}
+
+				@media @xlarge
+				{
+					max-height: 23em;
+				}
+			}
+			
+			> h2
+			{
+				text-transform: uppercase;
+				color: #00b8ee;
+				font-weight: bold;
+				font-size: 1.9em;
+			}
+			
+			> p
+			{
+				font-size: 1em;
+				font-weight: bold;
+				line-height: 1.3;
+				margin: 2.5em 0;
+			}
+			
+			> .countdown
+			{
+				display: none;
+				width: 100%;				
+
+				&.active
+				{
+					display: block;
+				}
+				
+				> div
+				{
+					> span
+					{
+						float: left;
+						width: 22%;
+						margin: 0 3% 0 0;
+						border-color: ;
+						border-top: 2px solid rgba(0,0,0,.2);
+						border-bottom: 2px solid rgba(0,0,0,.2);
+						padding: .5em 0;
+						
+						> span
+						{
+							display: block;
+							
+							&:first-of-type
+							{
+								font-size: 1.2em;
+								font-weight: bold;
+								
+								@media @xlarge
+								{
+									//font-size: 2em;
+								}
+							}
+	
+							&:last-of-type
+							{
+								font-size: .7em;
+								padding: .25em 0 0;
+								text-transform: uppercase;
+							}
+						}
+					}
+				}
+			}
+			
+			> ul,
+			> ul > li
+			{
+				float: left;
+				width: 100%;
+				clear: both;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			> ul
+			{
+				margin-bottom: 2.4em;
+				width: 100%;
+				
+				> li
+				{
+					padding-bottom: .5em;
+					float: left;
+					width: auto;
+					clear: none;
+					margin: 0 .5em 0 0;
+					max-width: 12em;
+					
+					@media @xlarge
+					{
+						clear: both;
+						width: 100%;
+					}
+					
+					> a
+					{
+						display: block;
+						background-color: #00b8ee;
+						color: white;
+						padding: .75em;
+						font-size: .8em;
+						transition: .2s;
+										
+						> i
+						{
+							display: inline-block;
+							min-width: 1em;
+							text-align: center;
+							margin-right: .25em;
+						}
+						
+						&:hover
+						{
+							background-color: #184e83;
+						}
+					}
+				}
+			}
+			
+			> h3
+			{
+				line-height: 1.25;
+				font-size: 1em;
+				
+				@media @medium
+				{
+					font-size: 1.3em;
+				}
+			}
+		}
+		
+	}
+
+	&.rezzed
+	{
+		background-image: -webkit-radial-gradient(center center, #bcb2c9, #b3a9c0);
+		background-color: #b3a9c0;
+		color: #583e79;
+		
+		h2
+		{
+			color: #2b2441;
+		}
+		
+		ul
+		{
+			> li
+			{
+				> a
+				{
+					background-color: #504d7a;
+					
+					&:hover
+					{
+						background-color: #2b2441;
+					}
+				}
+			}
+		}
+		
+		.countdown
+		{
+			> div
+			{
+				> span
+				{
+					border-color: #9d8eae;
+				}
+			}
+		}
+	}
+}
