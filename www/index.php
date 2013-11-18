@@ -3,12 +3,20 @@
 	<link rel="stylesheet" type="text/less" href="less/base.less" />
 	<link rel="stylesheet" type="text/css" href="http://gregoryloucas.github.io/Fontstrap/assets/font-awesome/css/font-awesome.min.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js">
-	<script type="text/javascript">
-		less = { env: "development" };
-	</script>
-	<script src="less/less.js" type="text/javascript"></script>
-	<script src="countdown.js" type="text/javascript"></script>	
+	
+	<? $debug = false; ?>
+	
+	<? if($debug) { ?>
+		<script>
+			less = { env: "development" };
+		</script>
+		<script src="less/less.js"></script>
+	<? } else { ?>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<? } ?>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="countdown.js"></script>
 	
 	<script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1/prototype.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/effects.js"></script>	
