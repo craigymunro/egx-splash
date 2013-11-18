@@ -4,7 +4,10 @@
 	<link rel="stylesheet" type="text/css" href="http://gregoryloucas.github.io/Fontstrap/assets/font-awesome/css/font-awesome.min.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 	
-	<? $debug = false; ?>
+	<?
+	$debug = false;
+	$debug = true;
+	?>
 	
 	<? if($debug) { ?>
 		<script>
