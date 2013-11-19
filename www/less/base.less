@@ -1,3 +1,5 @@
+@import "mixins";
+
 @link: #0069ff;
 @font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -23,7 +25,7 @@ body
 }
 
 * {
-	box-sizing: border-box;
+	.border-box();
 	font-family: @font;
 }
 
@@ -172,7 +174,6 @@ a
 						float: left;
 						width: 22%;
 						margin: 0 3% 0 0;
-						border-color: ;
 						border-top: 2px solid rgba(0,0,0,.2);
 						border-bottom: 2px solid rgba(0,0,0,.2);
 						padding: .5em 0;

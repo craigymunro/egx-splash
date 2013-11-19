@@ -77,7 +77,7 @@
 					<ul>
 						<li><a href="http://www.egx<?=$event["code"]?>.net"><i class="icon-external-link"></i> Visit website</a></li>
 						<li><a href="http://www.egx<?=$event["code"]?>.net/tickets"><i class="icon-ticket"></i> Buy tickets</a></li>
-						<li><a href="http://www.egx<?=$event["code"]?>.net/faq"><i class="icon-info"></i> Exhibitor information</a></li>
+						<li><a href="http://www.egx<?=$event["code"]?>.net/faq"><i class="icon-info"></i> FAQ</a></li>
 					</ul>
 
 					<h3><?=implode(",<br/>", explode(",", $event["date"]))?></h3>
